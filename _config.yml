@@ -1,0 +1,16 @@
+language: zh-CN
+menu:
+  Home: /
+  Archives: /archives/
+  About: /about/
+  Subscribe: /rss.xml
+themecolor: red
+year: 2014
+UYUserId: 1889589
+bookmarks:
+-
+  name: hexo-theme-zan
+  link: https://github.com/esfak47/hexo-theme-zan
+-
+  name: github of esfak47
+  link: https://github.com/esfak47/

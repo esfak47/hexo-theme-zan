@@ -1,0 +1,11 @@
+<section id="zan-bodyer">
+  <div class="container">
+      <section id="mainstay" class="col-md-8">
+        <% page.posts.each(function(item){ %>
+      <%- partial('_partial/article', {item: item, index: true}) %>
+    <% }); %>
+      </section>
+      <%- partial('_partial/sidebar') %>
+    </section>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+					<div class="data-article hidden-xs">
+<%
+	var month = item.date.get('Month');
+	if(theme.language == 'zh-CN'){
+		month = month +'月';
+	}else{
+		month = [
+        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ][month -1 ];
+	}
+%>
+						<span class="month"><%= month %></span>
+						<span class="day"><%= item.date.get('Date') %></span>
+					</div>

@@ -1,0 +1,31 @@
+<div class="article well clearfix">
+<% if (index) { %>
+	<%- partial('post/date') %>
+	<% } %>
+	<section class="visible-md visible-lg">
+		<%- partial('post/title') %>
+		<div class="tag-article container">
+			<%- partial('post/categroy') %>
+			<%- partial('post/tag') %>
+		</div>
+		<div class="content-article">											
+			<div class="alert alert-zan">					
+				      <% if (item.excerpt && index){ %>
+        <%- item.excerpt %>
+        <% if (theme.excerpt_link){ %>
+          <p class="article-more-link">
+            <a href="<%- url_for(item.path) %>#more"><%= theme.excerpt_link %></a>
+          </p>
+        <% } %>
+      <% } else { %>
+        <%- item.content %>
+      <% } %>
+			</div>
+		</div>
+		<% if (index){ %>
+				<a class="btn btn-danger pull-right read-more" href="<%= url_for(item.path) %>" title=""> 阅读更多</a>
+		<% } else { %>
+	<%- partial('post/comment') %>
+<% } %>
+	</section>					
+</div>

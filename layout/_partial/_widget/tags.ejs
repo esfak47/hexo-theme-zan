@@ -1,0 +1,3 @@
+  <% site.tags.sort('name').each(function(item){ %>
+    <a href="<%- config.root %><%- item.path %>"><%= item.name %></a>
+  <% }); %>

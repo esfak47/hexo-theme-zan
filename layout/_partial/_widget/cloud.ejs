@@ -1,0 +1,18 @@
+	<div class="panel hidden-xs">
+		<ul class="nav nav-pills pills-zan">
+			<li class="active"><a href="#sidebar-categories" data-toggle="tab">分类目录</a></li>
+			<li><a href="#sidebar-tags" data-toggle="tab">热门标签</a></li>
+			<li><a href="#sidebar-links" data-toggle="tab">友情链接</a></li>
+		</ul>
+		<div class="tab-content">
+			<div class="tab-pane active nav bs-sidenav fade in" id="sidebar-categories">
+				<%- partial('categories') %>
+			</div>
+			<div class="tab-pane fade" id="sidebar-tags">
+				<%- partial('tags') %>
+			</div>
+			<div class="tab-pane nav bs-sidenav fade" id="sidebar-links">
+				<%- partial('bookmarks') %>
+			</div>
+		</div>
+	</div>

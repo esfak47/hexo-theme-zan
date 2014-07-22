@@ -1,0 +1,60 @@
+<div id="zan-bodyer" style="padding-top: 30px;">
+  <div class="container">
+    <section class="row">
+      <div class="col-md-8">
+        <% if (site.posts.length>0){ %>
+        <article class="article container well">
+         <div id="archives">
+         <%
+          var archives = [];
+page.posts.sort('date').each(function(item) {
+    var year = item.date.get('year');
+    var month = item.date.get('month');
+    if (!archives[year]) {
+        archives[year] = [];
+    }
+    if (!archives[year][month]) {
+        archives[year][month] = [];
+    }
+    archives[year][month].push({
+        title: item.title,
+        day: item.date.get('day'),
+        link: url_for(item.path)
+    });
+});
+%>
+          <% for (var year in archives) { %>
+            <h3 class="al_year"><%= year %> 年</h3>
+            <div class="panel-group" id="accordion">
+            <% for (var month in archives[year]) {%>
+            <div class="panel panel-default">
+                  <div class="panel-heading"> 
+      <h4 class="panel-title"> 
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= year %><%= month %>"><%= month %> 月</a>
+      </h4>
+    </div>  
+    <div id="collapse<%= year %><%= month %>" class="panel-collapse collapse"> 
+      <div class="panel-body">
+      <% for(var item in archives[year][month]) {%>
+              <p><%= archives[year][month][item].day %>日: 
+          <a class="archivesPostList" href="<%= archives[year][month][item].link %>"><%= archives[year][month][item].title %></a>  
+        </p>
+<% } %>
+
+      </div>
+    </div>
+    </div>
+             <% } %>
+            </div>
+          <% } %>
+</div>
+        </article>
+        <% }else{ %>
+        <p>抱歉，该页面不存在
+        </p>
+        <% } %>
+      </div>
+      <%- partial('_partial/sidebar') %>
+    </section>
+  </div>
+</div>

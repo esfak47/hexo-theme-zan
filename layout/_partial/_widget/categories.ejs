@@ -1,0 +1,3 @@
+  <% site.categories.sort('name').each(function(item){ %>
+    <li class="cat-item"><a href="<%- config.root %><%- item.path %>"><%= item.name %></a></li>
+  <% }); %>

@@ -1,0 +1,37 @@
+<header id="zan-header" class="navbar navbar-inverse bs-docs-nav">
+  <nav class="container">
+    <a href="<%= config.url %>"><div class="navbar-brand"><%= config.title %></div></a>
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="fa fa-reorder fa-lg"></span>
+    </button>
+    <div class="navbar-collapse bs-navbar-collapse collapse">
+<!--       <?php
+        $defaults = array(
+          'container' => '',
+          'menu_class' => 'nav navbar-nav',
+          'walker' => new ZanblogMenu('')
+        );
+        wp_nav_menu($defaults);
+      ?> -->
+      <ul id="menu-navbar" class="nav navbar-nav">
+
+    <% for (var i in theme.menu){ %>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="<%- theme.menu[i] %>"><%= i %></a></li>
+    <% } %>
+</ul>
+<!--       <?php if(dynamic_sidebar('搜索框')) {?>
+        <div class="search visible-lg">
+           <form method="get" id="searchform" class="form-inline" action="<?php bloginfo('url'); ?>">
+              <input class="form-control" type="text" name="s" id="s" placeholder="搜索..." />
+              <button type="submit" class="btn btn-danger btn-small" name="submit" ><i class="fa fa-search"></i></button>
+           </form>
+        </div>
+      <?php };?> -->
+    </div>
+  </nav>
+<!--   <div id="if-fixed" class="pull-right visible-lg visible-md">
+    <i class="fa fa-thumb-tack"></i>
+    <input type="checkbox">
+  </div> -->
+</header>

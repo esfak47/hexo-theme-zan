@@ -1,0 +1,55 @@
+<div class="visible-md visible-lg">
+		<div class="panel panel-zan random">
+			<div class="panel-heading">
+				<i class="fa fa-random"></i> 随机文章
+				<i class="fa fa-times-circle panel-remove"></i>
+				<i class="fa fa-chevron-circle-up panel-toggle"></i>
+			</div>
+			<ul class="list-group list-group-flush">
+<% function getArrayItems(arr, num) {
+    var temp_array = new Array();
+    for (var index in arr) {
+        temp_array.push(arr[index]);
+    }
+
+    var return_array = new Array();
+    for (var i = 0; i<num; i++) {
+        if (temp_array.length>0) {
+            var arrIndex = Math.floor(Math.random()*temp_array.length);
+            return_array[i] = temp_array[arrIndex];
+            temp_array.splice(arrIndex, 1);
+        } else {
+            break;
+        }
+    }
+    return return_array;
+}
+				function nameShorter(name,maxLength){
+					if (name){
+						if (name.length>maxLength){
+							return name.substring(0,maxLength);
+						}
+						return name;
+					}
+					return "no name";	
+				}
+				var allPost = [];
+				site.posts.each(function(item){
+						allPost.push(item);
+					})
+				var randomPosts = getArrayItems(allPost,8);
+
+				 %>
+				<% randomPosts.forEach(function(item){ %>
+				<li class="list-group-item">
+					<a href="<%= url_for(item.path) %>" rel="bookmark" target="_blank">					
+						<!-- 大屏PC端 -->
+						<div class="visible-lg"><%= nameShorter(item.title,20) %></div>
+						<!-- 小屏PC端 -->
+						<div class="visible-md"><%= nameShorter(item.title,15) %></div>
+					</a>
+				</li>
+				<% }); %>
+			</ul>
+		</div> 
+	</div>
