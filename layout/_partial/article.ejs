@@ -8,8 +8,7 @@
 			<%- partial('post/categroy') %>
 			<%- partial('post/tag') %>
 		</div>
-		<div class="content-article">											
-			<div class="alert alert-zan">					
+		<div class="content-article">																
 				      <% if (item.excerpt && index){ %>
         <%- item.excerpt %>
         <% if (theme.excerpt_link ){ %>
@@ -20,8 +19,7 @@
       <% } else { %>
         <%- item.content %>
       <% } %>
-			</div>
-		</div>
+		</div>		
 		<% if (index){ %>
 				<a class="btn btn-danger pull-right read-more" href="<%= url_for(item.path) %>" title=""> 阅读更多</a>
 		<% } else { %>

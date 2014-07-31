@@ -1,6 +1,7 @@
 /**
  * 在这里自定义你的CSS代码
  */
+ /****/
  .content-article .highlight table {
 margin: 0;
 width: auto;
@@ -190,3 +191,17 @@ pre .keyword,
 pre .javascript .function {
   color: #66d9ef;
 }
+/****/
+.content-article h1,.content-article h2,.content-article h3{
+	margin: 30px 0 15px;
+	border-bottom: 1px solid #eee
+}
+.content-article h1 {
+	font-size: 32.5px
+}
+
+.content-article h2 {
+	font-size: 26px
+}
+
+
