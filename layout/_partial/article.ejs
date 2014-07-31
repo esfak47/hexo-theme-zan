@@ -12,7 +12,7 @@
 			<div class="alert alert-zan">					
 				      <% if (item.excerpt && index){ %>
         <%- item.excerpt %>
-        <% if (theme.excerpt_link){ %>
+        <% if (theme.excerpt_link ){ %>
           <p class="article-more-link">
             <a href="<%- url_for(item.path) %>#more"><%= theme.excerpt_link %></a>
           </p>

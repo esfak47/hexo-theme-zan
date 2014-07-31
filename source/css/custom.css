@@ -1,3 +1,192 @@
 /**
  * 在这里自定义你的CSS代码
  */
+ .content-article .highlight table {
+margin: 0;
+width: auto;
+}
+.content-article table {
+width: 100%;
+border-collapse: collapse;
+border-spacing: 0;
+}
+.content-article p, .content-article table {
+line-height: 1.6em;
+margin: 1.6em 0;
+}
+.content-article pre,
+.content-article .highlight {
+  background: #272822;
+  margin: 0 -20px;
+  padding: 15px 20px;
+  border-style: solid;
+  border-color: #ddd;
+  border-width: 1px 0;
+  overflow: auto;
+  color: #f8f8f2;
+  line-height: 22.400000000000002px;
+}
+.content-article .highlight .gutter pre,
+.content-article .gist .gist-file .gist-data .line-numbers {
+  color: #666;
+  font-size: 0.85em;
+}
+.content-article pre,
+.content-article code {
+  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+}
+.content-article code {
+  background: #f0f0f0;
+  text-shadow: 0 1px #fff;
+  font-size: 0.85em;
+  padding: 0 0.3em;
+  border: 1px solid #dcdcdc;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.content-article pre code {
+  background: none;
+  text-shadow: none;
+  padding: 0;
+}
+.content-article .highlight pre {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.content-article .highlight table {
+  margin: 0;
+  width: auto;
+}
+.content-article .highlight td {
+  border: none;
+  padding: 0;
+}
+.content-article .highlight figcaption {
+  zoom: 1;
+  font-size: 0.85em;
+  color: #75715e;
+  line-height: 1em;
+  margin-bottom: 1em;
+}
+.content-article .highlight figcaption:before,
+.content-article .highlight figcaption:after {
+  content: "";
+  display: table;
+}
+.content-article .highlight figcaption:after {
+  clear: both;
+}
+.content-article .highlight figcaption a {
+  float: right;
+}
+.content-article .highlight .gutter pre {
+  text-align: right;
+  padding-right: 20px;
+}
+.content-article .gist {
+  margin: 0 -20px;
+  border-style: solid;
+  border-color: #ddd;
+  border-width: 1px 0;
+  background: #272822;
+  padding: 15px 20px 15px 0;
+}
+.content-article .gist .gist-file {
+  border: none;
+  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+  margin: 0;
+}
+.content-article .gist .gist-file .gist-data {
+  background: none;
+  border: none;
+}
+.content-article .gist .gist-file .gist-data .line-numbers {
+  background: none;
+  border: none;
+  padding: 0 20px 0 0;
+}
+.content-article .gist .gist-file .gist-data .line-data {
+  padding: 0 !important;
+}
+.content-article .gist .gist-file .highlight {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.content-article .gist .gist-file .gist-meta {
+  background: #272822;
+  color: #75715e;
+  font: 0.85em "微软雅黑", "Microsoft Yahei", "Droid Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-shadow: 0 0;
+  padding: 0;
+  margin-top: 1em;
+  margin-left: 20px;
+}
+.content-article .gist .gist-file .gist-meta a {
+  color: #e32d40;
+  font-weight: normal;
+}
+.content-article .gist .gist-file .gist-meta a:hover {
+  text-decoration: underline;
+}
+pre .comment,
+pre .preprocessor {
+  color: #75715e;
+}
+pre .tag {
+  color: #f8f8f2;
+}
+pre .title,
+pre .variable,
+pre .regexp,
+pre .ruby .constant,
+pre .xml .tag .title,
+pre .xml .pi,
+pre .xml .doctype,
+pre .html .doctype,
+pre .css .id,
+pre .css .class,
+pre .css .pseudo {
+  color: #f92672;
+}
+pre .number,
+pre .built_in,
+pre .literal,
+pre .constant {
+  color: #ae81ff;
+}
+pre .params {
+  color: #fd971f;
+}
+pre .class,
+pre .ruby .class .title,
+pre .css .rules .attribute,
+pre .attribute {
+  color: #a6e22e;
+}
+pre .string,
+pre .value,
+pre .inheritance,
+pre .header,
+pre .ruby .symbol,
+pre .xml .cdata {
+  color: #e6db74;
+}
+pre .css .hexcolor {
+  color: #a1efe4;
+}
+pre .function,
+pre .python .decorator,
+pre .python .title,
+pre .ruby .function .title,
+pre .ruby .title .keyword,
+pre .perl .sub,
+pre .javascript .title,
+pre .coffeescript .title {
+  color: #66d9ef;
+}
+pre .keyword,
+pre .javascript .function {
+  color: #66d9ef;
+}
