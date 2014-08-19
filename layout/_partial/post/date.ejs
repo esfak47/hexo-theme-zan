@@ -2,12 +2,12 @@
 <%
 	var month = item.date.get('Month');
 	if(theme.language == 'zh-CN'){
-		month = month +'月';
+		month = (month+1) +'月';
 	}else{
 		month = [
         "Jan", "Feb", "Mar", "Apr", "May", "Jun",
         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-    ][month -1 ];
+    ][month];
 	}
 %>
 						<span class="month"><%= month %></span>
