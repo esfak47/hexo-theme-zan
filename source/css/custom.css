@@ -192,16 +192,22 @@ pre .javascript .function {
   color: #66d9ef;
 }
 /****/
-.content-article h1,.content-article h2,.content-article h3{
-	margin: 30px 0 15px;
-	border-bottom: 1px solid #eee
-}
-.content-article h1 {
-	font-size: 32.5px
-}
-
-.content-article h2 {
-	font-size: 26px
-}
+.content-article { padding-right: 10px; color: #555; font-family: verdana, "Microsoft Yahei","Microsoft Jhenghei",STHeiti,PMingLiU,Simsun; }
+.content-article h1,
+.content-article h2,
+.content-article h3,
+.content-article h4,
+.content-article h5,
+.content-article h6 { margin: 0; padding: 0; font-family: "Times New Roman", Times ,serif;}
+.content-article h1 { padding: 3px 0; font-size: 20px; line-height: normal; margin-bottom: 20px; color: #489620; font-weight: 700; border-bottom: 1px solid #e8e8e8; }
+.content-article h2 { margin-bottom: 20px; color: #489620; padding: 3px 0; font-size: 18px; line-height: normal; border-bottom: 1px solid #e8e8e8; font-family: 700; }
+.content-article h3 { font-size: 16px; font-weight: 700; line-height: 26px; color: #489620; border-bottom: 1px solid #e8e8e8; margin-bottom: 18px; margin-top: 1.5em; }
+.content-article h4 { margin-bottom: 18px; font-size: 14px; font-weight: 700; color: #489620; line-height: 26px; text-transform: uppercase; }
+.content-article h5 { margin-bottom: 18px; color: #444; font-size: 14px; line-height: 26px; text-transform: uppercase; }
+.content-article h6 { font-size: 13px; font-weight: 700; margin-bottom: 0.5em; color: #444; line-height: 26px; }
+.content-article > h2:first-child, .content-article > h1:first-child, .content-article > h1:first-child + h2 { border: 0 none; }
+.content-article p { font-size: 13px; line-height: 24px; margin-bottom: 15px; text-indent:0px; }
+.content-article p img{padding:4px;background-color:#eee;border:1px solid #ddd;margin-bottom:20px}
+.content-article > p:first-child { margin: 0.8em 0; text-indent: 0; }
 
 
