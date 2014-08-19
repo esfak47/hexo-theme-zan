@@ -10,7 +10,7 @@
           var archives = [];
 page.posts.sort('date').each(function(item) {
     var year = item.date.get('year');
-    var month = item.date.get('month');
+    var month = item.date.get('month')+1;
     if (!archives[year]) {
         archives[year] = [];
     }
@@ -19,7 +19,7 @@ page.posts.sort('date').each(function(item) {
     }
     archives[year][month].push({
         title: item.title,
-        day: item.date.get('day'),
+        day: item.date.get('date'),
         link: url_for(item.path)
     });
 });
